@@ -10,7 +10,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title> Demo </title>
+    <title> WAAM </title>
 
     <style>
       * {
@@ -129,17 +129,15 @@
       </main5>
 
       <main6 style="float: right; max-height: 80%;">
-        <img src="p1.png" style=" justify-content: center; align-items: center; text-align: center; width: 90%; max-height: 200px; ">
+        <!-- <img src="p1.png" style=" justify-content: center; align-items: center; text-align: center; width: 90%; max-height: 200px; "> -->
         <div class="solid" id="myPlot" style="height: 5%; max-height: 300px;"></div>
         <div class="solid" id="myPlot1" style="height: 5%; max-height: 300px;"></div>
-        
+        <div class="solid" id="myPlot2" style="height: 5%; max-height: 300px;"></div>
       </main6>
 
     </main>
-
-
+    
   <iframe id="frame" style="width: 100%; border: 0; height: 0" src="report_v5.html"></iframe>
-
   <iframe id="frame1" style="width: 100%; border: 0; height: 0" src="index_tutorial.html"></iframe>
 
 </main>
@@ -151,17 +149,17 @@
 
     firebase
     .database()
-    .ref()
-    .on("value", function(snap){if(snap.val().control == 0){location.reload();}})
+    .ref("WAAM")
+    .on("value", function(snap){if(snap.val().control == 3){location.reload();}})
 
     firebase
     .database()
-    .ref()
-    .update({Print: 0, Tutorial: 0, control: 2}) 
+    .ref("WAAM")
+    .update({Print: 0, control: 0}) 
     
     firebase
     .database()
-    .ref()
+    .ref("WAAM")
     .on("value", function (snap) {
 
       if (snap.val().Print == 1){
@@ -174,18 +172,7 @@
         wspFrame.focus();
         wspFrame.print();
       }
-      
-      if (snap.val().Tutorial == 1){
-        firebase
-        .database()
-        .ref()
-        .update({Tutorial: 0, control: 2}) 
-        
-        let wspFrame = document.getElementById('frame1').contentWindow;
-        wspFrame.open("index_tutorial.html", "", "width=900, height=600");
-        // wspFrame.focus();
-        // wspFrame.print();
-      }})
+    })
     
   </script>
   </body>
