@@ -57,7 +57,7 @@ firebase
             // Define Data
             var data = [{x: labelsa, y: data1, mode:"lines"}];
             var datax1 = [{x: labelsb, y: data2, mode:"lines"}];
-            var datax1 = [{x: labelsc, y: data3, mode:"lines"}];
+            var datax2 = [{x: labelsc, y: data3, mode:"lines"}];
 
            function update(){
 
