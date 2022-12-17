@@ -31,9 +31,9 @@ firebase
   
             let k=2;
 
-            url1 = 'https://raw.githubusercontent.com/anh231000/Data/main/data1' + value.toString();
-            url2 = 'https://raw.githubusercontent.com/anh231000/Data/main/data2' + value.toString();
-            url3 = 'https://raw.githubusercontent.com/anh231000/Data/main/data' + value.toString();
+            url1 = 'https://raw.githubusercontent.com/lamtacta2/WAAM/main/Data/data1' + value.toString() + ".csv";
+            url2 = 'https://raw.githubusercontent.com/lamtacta2/WAAM/main/Data/data2' + value.toString() + ".csv";
+            url3 = 'https://raw.githubusercontent.com/lamtacta2/WAAM/main/Data/data' + value.toString() + ".csv";
 
             
             let workbook1 = XLSX.read(await (await fetch(url1)).arrayBuffer());
