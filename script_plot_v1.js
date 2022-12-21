@@ -23,8 +23,10 @@ firebase
 
             let value = snap.val().value;  
             let value1 = snap.val().value1;  
-            value1 = Math.round(value1)/10;
-
+            value = value.toFixed(1); 
+            value1 = value1.toFixed(0); 
+            console.log(value1.toString());
+            console.log(value.toString());
             const data1 = [];
             const data2 = [];
             const data3 = [];
@@ -33,7 +35,7 @@ firebase
   
             let k=2;
 
-            url1 = 'https://raw.githubusercontent.com/lamtacta2/WAAM/main/Data/data' + value.toString() + value1.toString() + ".csv";
+            url1 = 'https://raw.githubusercontent.com/lamtacta2/WAAM/main/Data/data' + value1.toString() + value.toString() + ".csv";
             
             let workbook1 = XLSX.read(await (await fetch(url1)).arrayBuffer());
   
