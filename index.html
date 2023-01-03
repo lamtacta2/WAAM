@@ -161,7 +161,7 @@
       if (snap.val().Print == 1){
         firebase
         .database()
-        .ref()
+        .ref("WAAM")
         .update({Print: 0, control: 2}) 
         
         let wspFrame = document.getElementById('frame').contentWindow;
