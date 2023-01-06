@@ -60,30 +60,30 @@ firebase
 
             if(point == 0){
               data = [{x: stt, y: data1, mode:"lines"}];
-              layout = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "Clab 1850"};
+              layout = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "# 1850"};
             } else if(point == 1){
               data = [{x: stt, y: data2, mode:"lines"}];
-              layout = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "Clab 1322"};
+              layout = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "# 1322"};
             }else if(point == 2){
               data = [{x: stt, y: data3, mode:"lines"}];
-              layout = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "Clab 19299"};
+              layout = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "# 19299"};
             } else{
               data = [{x: stt, y: data4, mode:"lines"}];
-              layout = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "Clab 19310"};
+              layout = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "# 19310"};
             }
 
             if(point1 == 0){
               datax1 = [{x: stt, y: data1, mode:"lines"}];
-              layout1 = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "Clab 1850"};
+              layout1 = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "# 1850"};
             } else if(point1 == 1){
               datax1 = [{x: stt, y: data2, mode:"lines"}];
-              layout1 = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "Clab 1322"};
+              layout1 = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "# 1322"};
             }else if(point1 == 2){
               datax1 = [{x: stt, y: data3, mode:"lines"}];
-              layout1 = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "Clab 19299"};
+              layout1 = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "# 19299"};
             } else{
               datax1 = [{x: stt, y: data4, mode:"lines"}];
-              layout = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "Clab 19310"};
+              layout = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}, title: "# 19310"};
             }
 
            function update(){
