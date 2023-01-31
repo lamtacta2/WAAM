@@ -1,20 +1,6 @@
 var container = document.querySelector("#unity-container");
 var canvas = document.querySelector("#unity-canvas");
 
-// function unityShowBanner(type) {
-//   function updateBannerVisibility() {
-//     warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-//   }
-//   // if (type == 'error') div.style = 'background: red; padding: 10px;';
-//   // else {
-//   //   if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-//   //   setTimeout(function() {
-//   //     updateBannerVisibility();
-//   //   }, 5000);
-//   // }
-//   updateBannerVisibility();
-// }
-
 var buildUrl = "Build";
       var loaderUrl = buildUrl + "/WAAM.loader.js";
       var config = {
