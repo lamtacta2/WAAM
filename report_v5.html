@@ -37,6 +37,10 @@
         display: flex;
       }
 
+      section_report{
+        width: 100%;
+      }
+
       main2{
         width: 80%;
         max-width: 200px;
@@ -90,6 +94,11 @@
       text-transform: none;
     }
 
+    section h5 {
+      font-size: 18px;
+      text-transform: none;
+    }
+
     section i{
       font-size: 15px;
     }
@@ -138,25 +147,25 @@
 					</div>
 					<br>
 					<div class="row">
-						<div class="col-xs-8 col-sm-8 col-md-8 text-left">
+            <section style="margin-left: 35%;">  <h2>EDPOMP - VIRTUAL LAB</h2> </section> 
+            <section style="margin-left: 8%;">  <h5>ADDITIVE MANUFACTURING (WIRE ARC ADDITIVE MANUFACTURING - WAAM)</h5> </section> 
+						<!-- <div class="col-xs-8 col-sm-8 col-md-8 text-left">
 							<div class="receipt-right">
 								<h5>Parameter</h5>
-								<!-- <p><b>Velocity (mm/s):</b> <b1 id="v"> 100</b1></p> -->
 								<p><b>Velocity (m/min) :</b> <b1 id="value"> 0.3</b1></p>
 								<p><b>Current (A):</b> <b1 id="value1"> 110</b1></p>
                 <p><b>Time start:</b> <b1 id="Time_S"> 500.33</b1></p>
                 <p><b>Time stop:</b> <b1 id="Time_St"> 500.33</b1></p>
 							</div>
-						</div>
-						<div
+						</div> -->
+						<!-- <div
 							class="col-xs-4 col-sm-4 col-md-4"
 							style="align-self: flex-end">
 							<div class="receipt-left">
 								<h1>Results</h1>
 							</div>
-						</div>
+						</div> -->
 					</div>
-					<br>
                     <section style="margin-left: 10%; margin-top: 2%;"> <h1 style="font-size: 30px;" > 1.	Problem description</h1></section>
                     <section style="margin-left: 5%; margin-top: 2%;"> <h3>Among metallic additive manufacturing technologies, wire and arc-directed energy deposition (WADED) is recently adopted to manufacture large industrial components. In this process, controlling the temperature evolution is very important since it directly influences the quality of the deposited parts. Consequently, we develop a simple GUI-based Virtual Lab to visualize the results of the WADED process. This software aims to give students and researchers the most simple, and comprehensive scientific overview of the aforementioned phenomenon.</h3></section>
                   
@@ -182,32 +191,166 @@
                       </main7>
                     </main>
                     
-                    <section style="margin-top: 2%; text-align: center;"> <h4> <b>Fig. 3.</b> Temperature field predicted by the surrogate model.</h3></section>                  
+                    <section_report id="section1">
+                      <section style="margin-left: 5%; margin-top: 2%;"> <h3><b>REPORT 1:</b></h3></section>                
+                      <section style="margin-left: 20%; margin-top: 2%;"> <h3><b>Table 1.</b> List of process parameters and boundary conditions set in the software.</h3></section>                
                       
+                      <table style="justify-content: center; align-items: center; text-align: center; margin-left: 30%;">
+                        <tr>
+                          <td style="background-color: beige;">Parameter</td>
+                          <td style="background-color: beige;">Value</td>
+                        </tr>
+                        <tr>
+                          <td>Velocity (m/min)</td>
+                          <td id="V_1">0.3</td>
+                        </tr>
+                        <tr>
+                          <td>Current (A)</td>
+                          <td id="C_1">110</td>
+                        </tr>
+                        <tr>
+                          <td>Time start</td>
+                          <td id="S_1"> 0:0:0 1/1/1990 </td>
+                        </tr>
+                        <tr>
+                          <td>Time stop</td>
+                          <td id="ST_1"> 0:0:0 1/1/1990 </td>
+                        </tr>
+                      </table>
+
+                    <section style="margin-top: 2%; text-align: center;"> <h4> <b>Fig. 3.1.</b> Temperature field predicted by the surrogate model.</h3></section>
                       <main1>
                         <main7>
-                          <div id="myPlot3" style="max-height: 300px;"></div>
+                          <div id="myPlot1_3" style="max-height: 300px;"></div>
                           <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;"> (a) 1850 </h4></section>
                         </main7>
                         <main7>
-                          <div id="myPlot4" style="max-height: 300px;"></div>
+                          <div id="myPlot1_4" style="max-height: 300px;"></div>
                           <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;" > (b) 1322</h4></section>
                         </main7>
                       </main1>
-
                       <main1>
                         <main7>
-                          <div id="myPlot5" style="max-height: 300px;"></div>
+                          <div id="myPlot1_5" style="max-height: 300px;"></div>
                           <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;" > (c) 19299</h4></section>
                         </main7>
-
                         <main7>
-                          <div id="myPlot6" style="max-height: 300px;"></div>
+                          <div id="myPlot1_6" style="max-height: 300px;"></div>
                           <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;" > (d) 19310</h4></section>
                         </main7>
                       </main1>
-
+                    </section_report>
+                    
+                    <section_report id="section2">
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <section style="margin-left: 5%; margin-top: 2%;"> <h3><b>REPORT 2:</b></h3></section>
+                      <section style="margin-left: 20%; margin-top: 2%;"> <h3><b>Table 2.</b> List of process parameters and boundary conditions set in the software.</h3></section>                
                       
+                      <table style="justify-content: center; align-items: center; text-align: center; margin-left: 30%;">
+                        <tr>
+                          <td style="background-color: beige;">Parameter</td>
+                          <td style="background-color: beige;">Value</td>
+                        </tr>
+                        <tr>
+                          <td>Velocity (m/min)</td>
+                          <td id="V_2">0.3</td>
+                        </tr>
+                        <tr>
+                          <td>Current (A)</td>
+                          <td id="C_2">110</td>
+                        </tr>
+                        <tr>
+                          <td>Time start</td>
+                          <td id="S_2"> 0:0:0 1/1/1990 </td>
+                        </tr>
+                        <tr>
+                          <td>Time stop</td>
+                          <td id="ST_2"> 0:0:0 1/1/1990 </td>
+                        </tr>
+                      </table>
+                      <section style="margin-top: 2%; text-align: center;"> <h4> <b>Fig. 3.2.</b> Temperature field predicted by the surrogate model.</h3></section>
+                        <main1>
+                          <main7>
+                            <div id="myPlot2_3" style="max-height: 300px;"></div>
+                            <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;"> (a) 1850 </h4></section>
+                          </main7>
+                          <main7>
+                            <div id="myPlot2_4" style="max-height: 300px;"></div>
+                            <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;" > (b) 1322</h4></section>
+                          </main7>
+                        </main1>
+                        <main1>
+                          <main7>
+                            <div id="myPlot2_5" style="max-height: 300px;"></div>
+                            <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;" > (c) 19299</h4></section>
+                          </main7>
+                          <main7>
+                            <div id="myPlot2_6" style="max-height: 300px;"></div>
+                            <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;" > (d) 19310</h4></section>
+                          </main7>
+                        </main1>
+                      </section_report>
+
+                      <section_report id="section3">
+                        <section style="margin-left: 5%; margin-top: 2%;"> <h3><b>REPORT 3:</b></h3></section>
+                        <section style="margin-left: 20%; margin-top: 2%;"> <h3><b>Table 3.</b> List of process parameters and boundary conditions set in the software.</h3></section>                
+                      
+                        <table style="justify-content: center; align-items: center; text-align: center; margin-left: 30%;">
+                          <tr>
+                            <td style="background-color: beige;">Parameter</td>
+                            <td style="background-color: beige;">Value</td>
+                          </tr>
+                          <tr>
+                            <td>Velocity (m/min)</td>
+                            <td id="V_3">0.3</td>
+                          </tr>
+                          <tr>
+                            <td>Current (A)</td>
+                            <td id="C_3">110</td>
+                          </tr>
+                          <tr>
+                            <td>Time start</td>
+                            <td id="S_3"> 0:0:0 1/1/1990 </td>
+                          </tr>
+                          <tr>
+                            <td>Time stop</td>
+                            <td id="ST_3"> 0:0:0 1/1/1990 </td>
+                          </tr>
+                        </table>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <section style="margin-top: 2%; text-align: center;"> <h4> <b>Fig. 3.3.</b> Temperature field predicted by the surrogate model.</h3></section>
+                          <main1>
+                            <main7>
+                              <div id="myPlot3_3" style="max-height: 300px;"></div>
+                              <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;"> (a) 1850 </h4></section>
+                            </main7>
+                            <main7>
+                              <div id="myPlot3_4" style="max-height: 300px;"></div>
+                              <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;" > (b) 1322</h4></section>
+                            </main7>
+                          </main1>
+                          <main1>
+                            <main7>
+                              <div id="myPlot3_5" style="max-height: 300px;"></div>
+                              <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;" > (c) 19299</h4></section>
+                            </main7>
+                            <main7>
+                              <div id="myPlot3_6" style="max-height: 300px;"></div>
+                              <section style="margin-left: 40%; margin-top: 2%;"> <h4 style="font-size: 15px;" > (d) 19310</h4></section>
+                            </main7>
+                          </main1>
+                        </section_report>
+
                       <section style="margin-left: 10%; margin-top: 2%;"> <h1 style="font-size: 25px;" > 3. References</h1></section>
                       <section style="margin-left: 5%; margin-top: 2%;"> <h3>[1] Hai Dang Nguyen, Manh Cuong Bui, Thinh Quy Duc Pham, Hong Thai Le, Van Xuan Tran, Hoang Son Tran, Rapid and accurate prediction of temperature evolution in wire plus arc additive manufacturing using feedforward neural network,<i> Manufacturing Letters,</i> 2022.</h3></section>
                       <section style="margin-left: 5%; margin-top: 2%;"> <h3>[2] Van Thao Le, Manh Cuong Bui, Thinh Quy Duc Pham, Hoang Son Tran, Xuan Van Tran, Efficient prediction of thermal history in wire and arc-directed energy deposition combining machine learning and numerical simulation, <i>submitted, </i>  2023</h3></section>
@@ -218,8 +361,6 @@
           <div class="row">
 						<div class="col-xs-8 col-sm-8 col-md-8 text-left">
 							<div class="receipt-right">
-								<h5 style="color: rgb(140, 140, 140)"
-									>Thank you!</h5>
 							</div>
 						</div>
 					</div>

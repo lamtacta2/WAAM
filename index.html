@@ -146,12 +146,19 @@
     firebase
     .database()
     .ref("WAAM")
-    .on("value", function(snap){if(snap.val().control == 3){location.reload();}})
+    .on("value", function(snap){if(snap.val().control == 3){
+      // location.reload();
+      var number = snap.val().section + 1;
+      firebase
+      .database()
+      .ref("WAAM")
+      .update({section: number, control: 0}) 
+    }})
 
     firebase
     .database()
     .ref("WAAM")
-    .update({Print: 0, control: 0}) 
+    .update({Print: 0, control: 0, section: 1}) 
     
     firebase
     .database()
@@ -177,8 +184,6 @@
         
         let wspFrame = document.getElementById('frame1').contentWindow;
         wspFrame.open("index_tutorial.html", "", "width=900, height=600");
-        // wspFrame.focus();
-        // wspFrame.print();
       }})
     
   </script>

@@ -1,21 +1,61 @@
-var today = new Date();
-var date = today.getDate() + '/' +(today.getMonth()+1)+'/'+ today.getFullYear();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-var dateTime = time+' '+date;
+document.getElementById("section2").style.display = "none";
+document.getElementById("section3").style.display = "none";
 
-document.getElementById("Time_S").innerHTML = dateTime;
+
 
 firebase
 .database()
 .ref("WAAM")
 .on("value", function (snap) {
 
-  if (snap.val().Print == 1){
+  if(snap.val().section%3 == 1 ){
+    var today = new Date();
+    var date = today.getDate() + '/' +(today.getMonth()+1)+'/'+ today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = time+' '+date;
+    document.getElementById("S_1").innerHTML = dateTime;
+  } else if(snap.val().section%3 == 2){
+    document.getElementById("section2").style.display = "block";
+    var today = new Date();
+    var date = today.getDate() + '/' +(today.getMonth()+1)+'/'+ today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = time+' '+date;
+    document.getElementById("S_2").innerHTML = dateTime;
+  } else {
+    document.getElementById("section3").style.display = "block";
+    var today = new Date();
+    var date = today.getDate() + '/' +(today.getMonth()+1)+'/'+ today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = time+' '+date;
+    document.getElementById("S_3").innerHTML = dateTime;
+  }
+
+
+  if (snap.val().Print == 1 || snap.val().control == 3){
+    if(snap.val().section%3 == 1){
     var today1 = new Date();
     var date1 = today1.getDate() + '/' +(today1.getMonth()+1)+'/'+ today1.getFullYear();
     var time1 = today1.getHours() + ":" + today1.getMinutes() + ":" + today1.getSeconds();
     var dateTime1 = time1+' '+date1;
-    document.getElementById("Time_St").innerHTML = dateTime1;
+    document.getElementById("ST_1").innerHTML = dateTime1;
+  } else if(snap.val().section%3 == 2){
+    var today1 = new Date();
+    var date1 = today1.getDate() + '/' +(today1.getMonth()+1)+'/'+ today1.getFullYear();
+    var time1 = today1.getHours() + ":" + today1.getMinutes() + ":" + today1.getSeconds();
+    var dateTime1 = time1+' '+date1;
+    document.getElementById("ST_2").innerHTML = dateTime1;
+  } else {
+    var today1 = new Date();
+    var date1 = today1.getDate() + '/' +(today1.getMonth()+1)+'/'+ today1.getFullYear();
+    var time1 = today1.getHours() + ":" + today1.getMinutes() + ":" + today1.getSeconds();
+    var dateTime1 = time1+' '+date1;
+    document.getElementById("ST_3").innerHTML = dateTime1;
+  }
+
+    firebase
+    .database()
+    .ref("WAAM")
+    .update({Print: 0, control: 0}) 
   }
 
   (async() => {
@@ -26,8 +66,6 @@ firebase
     let value1 = snap.val().value1;  
     value = value.toFixed(1); 
     value1 = value1.toFixed(0); 
-    document.getElementById("value").innerHTML = value;
-    document.getElementById("value1").innerHTML = value1;
 
     const data1 = [];
     const data2 = [];
@@ -63,10 +101,29 @@ firebase
     layout2 = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}};
     layout3 = {xaxis: {title: "time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}};
 
-    Plotly.newPlot("myPlot3", data, layout);
-    Plotly.newPlot("myPlot4", datax1, layout1);
-    Plotly.newPlot("myPlot5", datax2, layout2);
-    Plotly.newPlot("myPlot6", datax3, layout3);
+    if(snap.val().section%3 == 1){
+      document.getElementById("V_1").innerHTML = value;
+      document.getElementById("C_1").innerHTML = value1;
+      Plotly.newPlot("myPlot1_3", data, layout);
+      Plotly.newPlot("myPlot1_4", datax1, layout1);
+      Plotly.newPlot("myPlot1_5", datax2, layout2);
+      Plotly.newPlot("myPlot1_6", datax3, layout3);
+    } else if(snap.val().section%3 == 2){
+      document.getElementById("V_2").innerHTML = value;
+      document.getElementById("C_2").innerHTML = value1;
+      Plotly.newPlot("myPlot2_3", data, layout);
+      Plotly.newPlot("myPlot2_4", datax1, layout1);
+      Plotly.newPlot("myPlot2_5", datax2, layout2);
+      Plotly.newPlot("myPlot2_6", datax3, layout3);
+    } else {
+      document.getElementById("V_3").innerHTML = value;
+      document.getElementById("C_3").innerHTML = value1;
+      Plotly.newPlot("myPlot3_3", data, layout);
+      Plotly.newPlot("myPlot3_4", datax1, layout1);
+      Plotly.newPlot("myPlot3_5", datax2, layout2);
+      Plotly.newPlot("myPlot3_6", datax3, layout3);
+    }
+
 
   }})();
 });

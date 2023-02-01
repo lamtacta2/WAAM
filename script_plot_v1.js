@@ -94,4 +94,4 @@ firebase
              Plotly.newPlot("myPlot1", datax1, layout1);
              requestAnimationFrame(update);
            }}
-           requestAnimationFrame(update);}})(); }) 
+requestAnimationFrame(update);}})(); }) 
