@@ -1,8 +1,6 @@
 document.getElementById("section2").style.display = "none";
 document.getElementById("section3").style.display = "none";
 
-
-
 firebase
 .database()
 .ref("WAAM")

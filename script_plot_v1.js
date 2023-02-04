@@ -1,8 +1,6 @@
 var layout = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}};
 var layout1 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature (<sup>o</sup>C)"}};
-
 var demo = [{x: 0, y: 0, mode:"lines"}];
-
 Plotly.newPlot("myPlot", demo, layout);
 Plotly.newPlot("myPlot1", demo, layout1);  
 
@@ -33,8 +31,11 @@ firebase
             const data3 = [];
             const data4 = [];
             const stt = [];
-  
-            let k=2;
+
+            let k = 2;
+            k = snap.val().k;
+            let s = 1;
+            let check = 1;
 
             url1 = 'https://raw.githubusercontent.com/lamtacta2/WAAM/main/Data/data' + value1.toString() + value.toString() + ".csv";
             
@@ -88,10 +89,39 @@ firebase
 
            function update(){
              if (k<420){
+                s = s + 1;
+                if(s%10==1){
+                  firebase
+                  .database()
+                  .ref("WAAM")
+                  .on("value", function (snap) {
+                     check = snap.val().control;
+                     if(snap.val().k == 419){
+                        k = 419;
+                     }
+                  })
+                }
+
+                if(check == 5){
+                  firebase
+                  .database()
+                  .ref("WAAM")
+                  .update({k: k}) 
+                }
+
+                console.log(k);
+
+             if(check == 1){
               k = k+1;
-             if (k < 420){data_update(k);}
-             Plotly.newPlot("myPlot", data, layout);
-             Plotly.newPlot("myPlot1", datax1, layout1);
+              if(k>419){
+                 k = 419;
+              }
+              data_update(k);
+              Plotly.newPlot("myPlot", data, layout);
+              Plotly.newPlot("myPlot1", datax1, layout1);
+            }
+             
              requestAnimationFrame(update);
-           }}
-requestAnimationFrame(update);}})(); }) 
+           
+          }}
+            requestAnimationFrame(update);}})(); }) 
